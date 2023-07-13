@@ -1,0 +1,20 @@
+::ng-deep .scrolling-area {
+    direction: rtl !important;
+  }
+  ::ng-deep .scrolling-element-inside {
+    direction: rtl !important;
+  }
+  @media only screen and (max-width: 868px){
+    .cdk-overlay-pane {
+      max-width: 95vw !important;
+      width: 95% !important;
+      .mat-dialog-container {
+        padding: 12px !important;
+  
+        .form-auth {
+          margin: 1rem 0 !important;
+        }
+      }
+    }
+  }
+  

@@ -6,7 +6,11 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "dev:ssr": "ng run mytech:serve-ssr",
+    "serve:ssr": "node dist/mytech/server/main.js",
+    "build:ssr": "ng build && ng run mytech:server",
+    "prerender": "ng run mytech:prerender"
   },
   "private": true,
   "dependencies": {
@@ -17,8 +21,14 @@
     "@angular/forms": "^16.1.0",
     "@angular/platform-browser": "^16.1.0",
     "@angular/platform-browser-dynamic": "^16.1.0",
+    "@angular/platform-server": "^16.1.0",
     "@angular/router": "^16.1.0",
+    "@nguniversal/express-engine": "^16.1.1",
+    "domino": "^2.1.6",
+    "express": "^4.15.2",
+    "jalali-moment": "^3.3.11",
     "rxjs": "~7.8.0",
+    "sweetalert2": "^11.7.16",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
   },
@@ -26,7 +36,10 @@
     "@angular-devkit/build-angular": "^16.1.4",
     "@angular/cli": "~16.1.4",
     "@angular/compiler-cli": "^16.1.0",
+    "@nguniversal/builders": "^16.1.1",
+    "@types/express": "^4.17.0",
     "@types/jasmine": "~4.3.0",
+    "@types/node": "^16.11.7",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
